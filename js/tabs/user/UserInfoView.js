@@ -29,7 +29,7 @@ export default class UserInfoView extends Component {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: 'green',
+
         }
 
     });

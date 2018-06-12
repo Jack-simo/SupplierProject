@@ -23,15 +23,12 @@ export default class SupplierTabsView extends Component {
 
     constructor(props) {
 
-        super(props)
+        super(props);
         this.state = {
             selectedTab: "首页"
         }
     }
 
-    componentWillMount() {
-
-    }
 
     render() {
 
@@ -48,8 +45,7 @@ export default class SupplierTabsView extends Component {
                         selectedTitleStyle={this.styles.tabTitleActive}
                         renderIcon={() => this.renderTabIcon(require("./home/img/tab-icon/default.png"))}
                         renderSelectedIcon={() => this.renderTabIcon(require("./home/img/tab-icon/active.png"))}
-                        onPress={() => this.setState({selectedTab: '首页'})}
-                    >
+                        onPress={() => this.setState({selectedTab: '首页'})}>
                         <HomeView/>
 
                     </TabNavigator.Item>
