@@ -6,23 +6,37 @@ import {
     StyleSheet,
     ScrollView,
     Image,
+    TouchableHighlight
 } from 'react-native';
 
 
 export default class UserInfoView extends Component {
 
+    static navigationOptions = {
+        title: 'Welcome',
+    };
+
     render() {
+
+        const { navigate } = this.props.navigation;
 
         return (
 
             <View style={this.styles.container}>
 
 
-                <View style={{height:48,backgroundColor:"#3192ff",alignItems:'center',flexDirection:'row',justifyContent:'center'}}>
+                <View style={{
+                    height: 48,
+                    backgroundColor: "#3192ff",
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    justifyContent: 'center'
+                }}>
 
-                    <Text style={{fontSize:18, color:"#fff"}}>用户中心</Text>
+                    <Text style={{fontSize: 18, color: "#fff"}}>用户中心</Text>
 
-                    <Image style={{width:24,height:24,position:'absolute',right:12}} source={require("./img/icon-setting.png")}/>
+                    <Image style={{width: 24, height: 24, position: 'absolute', right: 12}}
+                           source={require("./img/icon-setting.png")}/>
 
                 </View>
 
@@ -40,19 +54,21 @@ export default class UserInfoView extends Component {
                                source={require("./img/icon-head.png")}/>
 
 
-                        <View style={{marginLeft:24,marginRight:16}}>
+                        <View style={{marginLeft: 24, marginRight: 16}}>
 
-                            <View style={{flexDirection:'row',alignItems:'center'}}>
+                            <View style={{flexDirection: 'row', alignItems: 'center'}}>
 
-                                <Text style={{fontSize:17, color:"#fff"}} numberOfLines={2}>未登录</Text>
+                                <Text style={{fontSize: 17, color: "#fff"}} numberOfLines={2}>未登录</Text>
 
-                                <Image style={{width:61,height:21,marginLeft:10,marginTop:4}} source={require("./img/icon-chance-provider.png")}/>
+                                <Image style={{width: 61, height: 21, marginLeft: 10, marginTop: 4}}
+                                       source={require("./img/icon-chance-provider.png")}/>
 
                             </View>
 
-                            <Text style={{fontSize:15, color:"#fff",marginTop:5}} numberOfLines={2}>用户账号：15259125912</Text>
+                            <Text style={{fontSize: 15, color: "#fff", marginTop: 5}}
+                                  numberOfLines={2}>用户账号：15259125912</Text>
 
-                            <Text style={{fontSize:15, color:"#fff",marginTop:5}}>供应商编码：N00412</Text>
+                            <Text style={{fontSize: 15, color: "#fff", marginTop: 5}}>供应商编码：N00412</Text>
 
                         </View>
 
@@ -221,19 +237,23 @@ export default class UserInfoView extends Component {
                     </View>
 
 
-                    <View style={this.styles.item}>
+                    <TouchableHighlight onPress={() => navigate('Login', {name: 'login'})}>
 
-                        <Image style={this.styles.itemImage} source={require("./img/icon-about.png")}/>
+                        <View style={this.styles.item}>
 
-                        <Text style={this.styles.itemText}>关于我们</Text>
+                            <Image style={this.styles.itemImage} source={require("./img/icon-about.png")}/>
 
-                        <Text style={{flex: 1}}/>
+                            <Text style={this.styles.itemText}>关于我们</Text>
 
-                        <Image style={this.styles.itemArrow} source={require("./img/icon-arrow.png")}/>
+                            <Text style={{flex: 1}}/>
 
-                    </View>
+                            <Image style={this.styles.itemArrow} source={require("./img/icon-arrow.png")}/>
 
-                    <View style={{height:10,backgroundColor:"#f2f2f2"}}/>
+                        </View>
+
+                    </TouchableHighlight>
+
+                    <View style={{height: 10, backgroundColor: "#f2f2f2"}}/>
 
                 </ScrollView>
 

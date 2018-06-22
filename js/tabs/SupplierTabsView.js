@@ -16,7 +16,7 @@ import {
 import HomeView from './home/HomeView';
 import DataView from './data/DataView';
 import OrderView from './order/OrderView';
-import UserInfoView from './user/UserInfoView';
+import LoginView from "../login/LoginView";
 
 export default class SupplierTabsView extends Component {
 
@@ -46,6 +46,7 @@ export default class SupplierTabsView extends Component {
                         renderIcon={() => this.renderTabIcon(require("./home/img/tab-icon/default.png"))}
                         renderSelectedIcon={() => this.renderTabIcon(require("./home/img/tab-icon/active.png"))}
                         onPress={() => this.setState({selectedTab: '首页'})}>
+
                         <HomeView/>
 
                     </TabNavigator.Item>
@@ -58,6 +59,7 @@ export default class SupplierTabsView extends Component {
                         renderIcon={() => this.renderTabIcon(require("./data/img/tab-icon/default.png"))}
                         renderSelectedIcon={() => this.renderTabIcon(require("./data/img/tab-icon/active.png"))}
                         onPress={() => this.setState({selectedTab: '数据服务'})}>
+
                         <DataView/>
 
                     </TabNavigator.Item>
@@ -71,6 +73,7 @@ export default class SupplierTabsView extends Component {
                         renderIcon={() => this.renderTabIcon(require("./order/img/tab-icon/default.png"))}
                         renderSelectedIcon={() => this.renderTabIcon(require("./order/img/tab-icon/active.png"))}
                         onPress={() => this.setState({selectedTab: '订单服务'})}>
+
                         <OrderView/>
 
                     </TabNavigator.Item>
@@ -84,7 +87,8 @@ export default class SupplierTabsView extends Component {
                         renderIcon={() => this.renderTabIcon(require("./user/img/tab-icon/default.png"))}
                         renderSelectedIcon={() => this.renderTabIcon(require("./user/img/tab-icon/active.png"))}
                         onPress={() => this.setState({selectedTab: '我的'})}>
-                        <UserInfoView/>
+
+                        <LoginView/>
 
                     </TabNavigator.Item>
 
