@@ -6,7 +6,7 @@
  */
 
 import React, {Component} from 'react';
-import SupplierApp from "./js/SupplierApp";
+import Application from "./js/common/RootNavigation";
 
 type Props = {};
 
@@ -15,7 +15,7 @@ export default class App extends Component<Props> {
 
     render() {
         return (
-            <SupplierApp/>
+            <Application/>
         );
     }
 

@@ -15,6 +15,7 @@ export default class ClearInputText extends Component {
 
 
             </View>
+
         );
 
     };

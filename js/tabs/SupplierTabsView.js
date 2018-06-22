@@ -16,9 +16,13 @@ import {
 import HomeView from './home/HomeView';
 import DataView from './data/DataView';
 import OrderView from './order/OrderView';
-import LoginView from "../login/LoginView";
+import UserInfoView from "./user/UserInfoView";
 
+
+var navigation=null;
 export default class SupplierTabsView extends Component {
+
+
 
 
     constructor(props) {
@@ -27,6 +31,7 @@ export default class SupplierTabsView extends Component {
         this.state = {
             selectedTab: "首页"
         }
+        navigation=this.props.navigation;
     }
 
 
@@ -88,7 +93,7 @@ export default class SupplierTabsView extends Component {
                         renderSelectedIcon={() => this.renderTabIcon(require("./user/img/tab-icon/active.png"))}
                         onPress={() => this.setState({selectedTab: '我的'})}>
 
-                        <LoginView/>
+                        <UserInfoView navigation={navigation}/>
 
                     </TabNavigator.Item>
 

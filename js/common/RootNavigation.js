@@ -4,12 +4,17 @@ import {StackNavigator} from 'react-navigation';
 import SupplierApp from "../SupplierApp";
 import LoginView from "../login/LoginView";
 import UserInfoView from "../tabs/user/UserInfoView";
+import SupplierTabsView from "../tabs/SupplierTabsView";
 
 
-export default  Application = StackNavigator({
+export default  RootNavigation = StackNavigator({
 
     Home: {
         screen: SupplierApp,
+    },
+
+    SupplierTab:{
+        screen:SupplierTabsView,
     },
 
     UserInfo:{
@@ -19,7 +24,5 @@ export default  Application = StackNavigator({
     Login:{
         screen:LoginView,
     }
-
-
 
 });

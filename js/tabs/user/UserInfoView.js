@@ -6,19 +6,22 @@ import {
     StyleSheet,
     ScrollView,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
 } from 'react-native';
 
 
+var navigation = null;
+
 export default class UserInfoView extends Component {
 
-    static navigationOptions = {
-        title: 'Welcome',
-    };
+    constructor(props) {
+        super(props);
+        navigation = this.props.navigation;
+    }
 
     render() {
 
-        const { navigate } = this.props.navigation;
+        // const { navigate } = this.props.navigation;
 
         return (
 
@@ -237,7 +240,7 @@ export default class UserInfoView extends Component {
                     </View>
 
 
-                    <TouchableHighlight onPress={() => navigate('Login', {name: 'login'})}>
+                    <TouchableHighlight onPress={() => this.props.navigation.navigate('Login', {name: 'login'})}>
 
                         <View style={this.styles.item}>
 

@@ -22,6 +22,7 @@ export default class HomeView extends Component {
         );
     }
 
+
     styles = StyleSheet.create({
 
         container: {
